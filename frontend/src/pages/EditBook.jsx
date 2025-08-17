@@ -25,7 +25,7 @@ function EditBook() {
   useEffect(() => {
     const fetchBook = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/books/${id}`);
+        const response = await axios.get(`https://online-book-store-fll0.onrender.com/api/books/${id}`);
         const book = response.data;
         setBookData({
           bookName: book.bookName,
@@ -101,7 +101,7 @@ function EditBook() {
     setIsSubmitting(true);
 
     try {
-      const response = await axios.put(`http://localhost:5000/api/books/${id}`, {
+      const response = await axios.put(`https://online-book-store-fll0.onrender.com/api/books/${id}`, {
         ...bookData,
         oldPrice: bookData.oldPrice || undefined, // Don't send if empty
         description: bookData.description || undefined,

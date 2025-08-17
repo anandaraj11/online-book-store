@@ -11,7 +11,7 @@ function AllBooks() {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/books');
+        const response = await axios.get('https://online-book-store-fll0.onrender.com/api/books');
         setBooks(response.data);
         setLoading(false);
       } catch (err) {
@@ -26,7 +26,7 @@ function AllBooks() {
   // Handle delete book
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/books/${id}`);
+      await axios.delete(`https://online-book-store-fll0.onrender.com/api/books/${id}`);
       setBooks(books.filter(book => book._id !== id));
     } catch (err) {
       setError(err.message);

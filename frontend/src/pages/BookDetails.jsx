@@ -13,7 +13,7 @@ function BookDetails() {
   useEffect(() => {
     const fetchBook = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/books/${id}`);
+        const response = await axios.get(`https://online-book-store-fll0.onrender.com/api/books/${id}`);
         setBook(response.data);
         setLoading(false);
       } catch (err) {
