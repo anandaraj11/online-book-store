@@ -9,7 +9,7 @@ const bookRoutes = require("./routes/bookRoutes");
 const app = express();
 app.use(cors(
     { 
-        origin : "http://localhost:5173"
+        origin : "https://online-book-store-swart.vercel.app"
     }
 ));
 app.use(bodyParser.json());
