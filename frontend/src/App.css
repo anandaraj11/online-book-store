@@ -1,0 +1,12 @@
+.navbar{
+    background-color: rgb(233, 233, 233);
+}
+.navbar .navbar-brand{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: chocolate;
+}
+.navbar-nav .nav-item .nav-link:hover{
+    text-decoration: underline !important;
+    color: orangered !important;
+}
